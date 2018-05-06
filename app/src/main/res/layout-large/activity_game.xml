@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:background="@mipmap/background">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stateMatch"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="40dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/stateMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <TextView
+            android:id="@+id/numCellsRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="26dp"
+            android:text="@string/default_number"/>
+
+        <TextView
+            android:id="@+id/textCellsRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/numCellsRemaining"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="8dp"
+            android:textSize="26dp"
+            android:text="@string/textCellsRemaining"/>
+
+        <TextView
+            android:id="@+id/seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/seconds"
+            android:textColor="@android:color/black"
+            android:textSize="26dp" />
+
+        <TextView
+            android:id="@+id/numberSeconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:gravity="right"
+            android:layout_toLeftOf="@+id/seconds"
+            android:text="@string/default_seconds"
+            android:textColor="@android:color/black"
+            android:textSize="26dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/numberSeconds"
+            android:background="@drawable/clock1"
+            android:gravity="right" />
+    </RelativeLayout>
+
+
+
+    <GridView
+        android:id="@+id/reversiTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchMode="columnWidth"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/stateMatch"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/namePlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reversiTable"
+        android:layout_marginLeft="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="26dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/numDiskP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reversiTable"
+        android:layout_toRightOf="@+id/namePlayer1"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:textSize="26dp"/>
+
+    <TextView
+        android:id="@+id/nameCpu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reversiTable"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/numDiskP1"
+        android:text="@string/cpu_name"
+        android:textColor="@android:color/black"
+        android:textSize="26dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/numDiskC1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reversiTable"
+        android:layout_toRightOf="@+id/nameCpu1"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:textSize="26dp"/>
+
+</RelativeLayout>
