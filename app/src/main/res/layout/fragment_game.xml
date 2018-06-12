@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".Fragments.GameFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/stateMatch"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/stateMatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <TextView
+                android:id="@+id/numCellsRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_number"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textCellsRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/numCellsRemaining"
+                android:text="@string/textCellsRemaining"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/seconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/seconds"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/numberSeconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_toStartOf="@+id/seconds"
+                android:gravity="end"
+                android:text="@string/default_seconds"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/numberSeconds"
+                android:background="@drawable/clock"
+                android:gravity="end" />
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/reversiTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stateMatch"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:verticalSpacing="10dp"
+            android:gravity="center"
+            android:stretchMode="columnWidth" />
+
+        <TextView
+            android:id="@+id/namePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reversiTable"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/numDiskP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reversiTable"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/namePlayer1"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nameCpu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reversiTable"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/numDiskP1"
+            android:text="@string/cpu_name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/numDiskC1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reversiTable"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/nameCpu1"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</FrameLayout>

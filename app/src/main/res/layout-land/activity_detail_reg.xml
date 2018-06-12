@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Black"
+    tools:context=".BDSQLite.DetailRegActivity">
+
+    <fragment
+        android:id="@+id/RegFragment"
+        android:name="com.udl.viladegut.ortega.reversi.Fragments.RegFrag"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        tools:layout="@layout/fragment_reg" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/buttonGoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/colorbutton"
+            android:drawableStart="@drawable/back"
+            android:text="@string/goBack"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black"
+    tools:context=".Fragments.RegFrag">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <TextView
+            android:id="@+id/titleRegDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/detailReg"
+            android:textColor="@color/green"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/regID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@id/titleRegDetail"
+            android:text="@string/defaultId"
+            android:textColor="@color/green"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleRegDetail"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/textAlias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/alias"
+                android:textColor="@color/green"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/aliasP1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/textAlias"
+                android:text="@string/defaultId"
+                android:textColor="#FFFFFFFF"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/textData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aliasP1"
+                android:layout_margin="5dp"
+                android:text="@string/dateTimeReg"
+                android:textColor="@color/green"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dateTimeReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aliasP1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/textData"
+                android:text="@string/default_number"
+                android:textColor="#FFFFFFFF"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/textBoard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateTimeReg"
+                android:layout_margin="5dp"
+                android:text="@string/boardSize"
+                android:textColor="@color/green"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/boardSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateTimeReg"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/textData"
+                android:text="@string/default_number"
+                android:textColor="#FFFFFFFF"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/textTimeControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/boardSize"
+                android:layout_margin="5dp"
+                android:text="@string/timeIdentifier"
+                android:textColor="@color/green"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TimeControlValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/boardSize"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/textTimeControl"
+                android:text="@string/defaultId"
+                android:textColor="#FFFFFFFF"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/textBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TimeControlValue"
+                android:layout_margin="5dp"
+                android:text="@string/numBlack"
+                android:textColor="@color/green"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/BlackValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TimeControlValue"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/textBlack"
+                android:text="@string/default_number"
+                android:textColor="#FFFFFFFF"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/textWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BlackValue"
+                android:layout_margin="5dp"
+                android:text="@string/numWhite"
+                android:textColor="@color/green"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/WhiteValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BlackValue"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/textWhite"
+                android:text="@string/default_number"
+                android:textColor="#FFFFFFFF"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/textTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/WhiteValue"
+                android:layout_margin="5dp"
+                android:text="@string/totalTime"
+                android:textColor="@color/green"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TotalTimeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/WhiteValue"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/textWhite"
+                android:text="@string/default_number"
+                android:textColor="#FFFFFFFF"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/textResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TotalTimeValue"
+                android:layout_margin="5dp"
+                android:text="@string/stateResult"
+                android:textColor="@color/green"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/resultValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TotalTimeValue"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/textWhite"
+                android:paddingStart="20dp"
+                android:text="@string/defaultId"
+                android:textColor="#FFFFFFFF"
+                android:textSize="26sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

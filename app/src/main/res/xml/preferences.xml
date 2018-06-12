@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Match">
+        <EditTextPreference
+            android:dialogTitle="@string/playerIdentifier"
+            android:key="@string/aliasMenu"
+            android:summary="Alias of the player"
+            android:title="@string/aliasMenu" />
+        <ListPreference
+            android:dialogTitle="@string/boardSize"
+            android:entries="@array/sizes"
+            android:entryValues="@array/sizes"
+            android:key="@string/boardMenu"
+            android:summary="Size of the board in game"
+            android:title="@string/boardMenu" />
+
+        <ListPreference
+            android:dialogTitle="@string/difficultIdentifier"
+            android:entries="@array/difficulties"
+            android:entryValues="@array/difficulties"
+            android:key="@string/GameDifficult"
+            android:summary="A cpu difficulty in game"
+            android:title="@string/GameDifficult" />
+
+        <CheckBoxPreference
+            android:key="@string/timeMenu"
+            android:summary="Time control in game"
+            android:title="@string/timeMenu" />
+    </PreferenceCategory>
+</PreferenceScreen>

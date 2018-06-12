@@ -51,4 +51,24 @@
     <string name="seconds_long">segons</string>
     <string name="helpTitle">Ajuda</string>
     <string name="configuration">Configuració</string>
+    <string name="log_title">Log de la partida</string>
+    <string name="checkItems">Comprovar partida</string>
+    <string name="deleteItems">Eliminar registre</string>
+    <string name="detailReg">Detalls partida</string>
+    <string name="dateTimeReg">Dia i hora:</string>
+    <string name="boardSize">Mida taula:</string>
+    <string name="numBlack">Num. Negres:</string>
+    <string name="numWhite">Num. Blanques:</string>
+    <string name="totalTime">Temps total:</string>
+    <string name="affirmative">Si</string>
+    <string name="negative">No</string>
+    <string-array name="sizes">
+        <item>8</item>
+        <item>6</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="difficulties">
+        <item>easy</item>
+        <item>normal</item>
+    </string-array>
 </resources>

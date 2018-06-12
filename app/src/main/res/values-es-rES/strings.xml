@@ -1,15 +1,16 @@
 <resources>
-    <string name = "app_name"> Reversi </string>
-    <string name = "start_match"> Empezar partida </string>
-    <string name = "help"> Ayuda </string>
-    <string name = "exit"> Salir </string>
-    <string name = "Welcome"> Bienvenido al juego del Reversi </string>
-    <string name = "textHelp"> El juego consiste en rellenar con el máximo número de fichas de tu color (el negro), haciendo girar las fichas del oponente (la app), que tendrá las blancas. </string>
-    <string name = "textHelp1"> En cada turno, el jugador coloca una ficha en una casilla vacía, por lo que entre esta y otra del mismo color se marque una o más fichas del oponente. Las fichas entre ambas quedan automáticamente convertidas al color de quien ha tirado. </string>
-    <string name = "textHelp2"> Las líneas cuentan en horizontal, vertical y diagonal. Una misma ficha puede capturar piezas en diferentes líneas, si acoseguir rodearlas de este mismo color. </string>
-    <string name = "textHelp3"> Si un jugador no puede colocar ninguna ficha de manera descrita, pierde el turno. Sigue la alternancia hasta que ninguno de los dos puede colocar una ficha o bien todo el tablero a quedado cubierto de fichas. </string>
-    <string name = "textHelp4"> Gana el jugador que ha conseguido colocar más fichas de su color. </string>
-    <string name = "goBack"> Atras </string>
+    <string name="app_name"> Reversi </string>
+    <string name="start_match"> Empezar partida </string>
+    <string name="help"> Ayuda </string>
+       
+    <string name="exit"> Salir </string>
+    <string name="Welcome"> Bienvenido al juego del Reversi </string>
+    <string name="textHelp"> El juego consiste en rellenar con el máximo número de fichas de tu color (el negro), haciendo girar las fichas del oponente (la app), que tendrá las blancas. </string>
+    <string name="textHelp1"> En cada turno, el jugador coloca una ficha en una casilla vacía, por lo que entre esta y otra del mismo color se marque una o más fichas del oponente. Las fichas entre ambas quedan automáticamente convertidas al color de quien ha tirado. </string>
+    <string name="textHelp2"> Las líneas cuentan en horizontal, vertical y diagonal. Una misma ficha puede capturar piezas en diferentes líneas, si acoseguir rodearlas de este mismo color. </string>
+    <string name="textHelp3"> Si un jugador no puede colocar ninguna ficha de manera descrita, pierde el turno. Sigue la alternancia hasta que ninguno de los dos puede colocar una ficha o bien todo el tablero a quedado cubierto de fichas. </string>
+    <string name="textHelp4"> Gana el jugador que ha conseguido colocar más fichas de su color. </string>
+    <string name="goBack"> Atras </string>
     <string name="playerIdentifier">Alias identificativo:</string>
     <string name="tableIdentifier">Mida del tablero:</string>
     <string name="midaGran">8</string>
@@ -51,4 +52,24 @@
     <string name="error_init">No se ha podido iniciar el juego</string>
     <string name="helpTitle">Ayuda</string>
     <string name="configuration">Configuración</string>
+    <string name="log_title">Log de la partida</string>
+    <string name="checkItems">Comprobar partida</string>
+    <string name="deleteItems">Eliminar registro</string>
+    <string name="detailReg">Detalles partida</string>
+    <string name="dateTimeReg">Dia y hora:</string>
+    <string name="boardSize">Tamaño parrilla:</string>
+    <string name="numBlack">Num. Negras:</string>
+    <string name="numWhite">Num. Blancas:</string>
+    <string name="totalTime">Tiempo total:</string>
+    <string name="affirmative">Si</string>
+    <string name="negative">No</string>
+    <string-array name="sizes">
+        <item>8</item>
+        <item>6</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="difficulties">
+        <item>easy</item>
+        <item>normal</item>
+    </string-array>
 </resources>

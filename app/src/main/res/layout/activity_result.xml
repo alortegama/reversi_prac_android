@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/actualDateTime"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="@string/logValuesText"
         android:textColor="@android:color/black"
         android:textSize="16dp"
@@ -87,71 +87,81 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/logValues"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
         android:text="@string/emailText"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/addressEmail"
+    <LinearLayout
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/destinataryText"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:imeOptions="actionDone"
-        android:inputType="textEmailAddress"
-        android:textColor="@android:color/black"
-        android:textSize="14sp" />
+        android:layout_below="@id/logValues"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp">
 
-    <Button
-        android:id="@+id/buttonSendEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_below="@+id/addressEmail"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/colorbutton"
-        android:drawableLeft="@drawable/email"
-        android:drawablePadding="10dp"
-        android:textSize="12dp"
-        android:text="@string/send_email"
-        android:textColor="@android:color/black" />
+        <EditText
+            android:id="@+id/addressEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonSendEmail"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/colorbutton"
+            android:drawableLeft="@drawable/email"
+            android:drawablePadding="10dp"
+            android:textSize="12dp"
+            android:text="@string/send_email"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonSendEmail"
+        android:layout_below="@+id/email"
         android:layout_marginBottom="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:gravity="center">
 
         <Button
             android:id="@+id/buttonGoBack"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/colorbutton"
             android:drawableLeft="@drawable/back"
             android:drawablePadding="10dp"
-            android:textSize="12dp"
             android:text="@string/goBack"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/buttonExit"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/colorbutton"
             android:drawableLeft="@drawable/logout"
             android:drawablePadding="10dp"
-            android:textSize="12dp"
             android:text="@string/exit"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textSize="12dp" />
 
     </LinearLayout>
 

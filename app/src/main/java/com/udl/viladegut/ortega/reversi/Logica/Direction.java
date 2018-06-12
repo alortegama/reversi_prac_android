@@ -1,4 +1,4 @@
-package com.udl.viladegut.ortega.reversi;
+package com.udl.viladegut.ortega.reversi.Logica;
 
 public class Direction {
 

@@ -2,58 +2,28 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape>
-            <gradient
-                android:angle="90"
-                android:endColor="#585858"
-                android:startColor="#8b8b8b" />
-            <stroke
-                android:width="3dp"
-                android:color="#303030" />
-            <corners
-                android:radius="10dp" />
-            <padding
-                android:bottom="10dp"
-                android:left="10dp"
-                android:right="10dp"
-                android:top="10dp" />
+            <gradient android:angle="90" android:endColor="#585858" android:startColor="#8b8b8b" />
+            <stroke android:width="3dp" android:color="#303030" />
+            <corners android:radius="10dp" />
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
         </shape>
     </item>
 
     <item android:state_focused="true">
         <shape>
-            <gradient
-                android:angle="270"
-                android:endColor="#B74200"
-                android:startColor="#FF640C" />
-            <stroke
-                android:width="3dp"
-                android:color="#303030" />
-            <corners
-                android:radius="10dp" />
-            <padding
-                android:bottom="10dp"
-                android:left="10dp"
-                android:right="10dp"
-                android:top="10dp" />
+            <gradient android:angle="270" android:endColor="#B74200" android:startColor="#FF640C" />
+            <stroke android:width="3dp" android:color="#303030" />
+            <corners android:radius="10dp" />
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
         </shape>
     </item>
 
     <item>
         <shape>
-            <gradient
-                android:angle="270"
-                android:endColor="#ffffff"
-                android:startColor="#ffffff" />
-            <stroke
-                android:width="3dp"
-                android:color="#303030" />
-            <corners
-                android:radius="10dp" />
-            <padding
-                android:bottom="10dp"
-                android:left="10dp"
-                android:right="10dp"
-                android:top="10dp" />
+            <gradient android:angle="270" android:endColor="#ffffff" android:startColor="#ffffff" />
+            <stroke android:width="3dp" android:color="#303030" />
+            <corners android:radius="10dp" />
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
         </shape>
     </item>
 </selector>

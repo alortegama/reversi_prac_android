@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".Fragments.GameFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/information"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/stateMatch"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numCellsRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginStart="15dp"
+                android:text="@string/default_number"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textCellsRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/numCellsRemaining"
+                android:text="@string/textCellsRemaining"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="15dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/seconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seconds"
+                android:layout_toEndOf="@+id/numberSeconds"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/textCellsRemaining"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/numberSeconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/imageClock"
+                android:text="@string/default_seconds"
+                android:layout_below="@id/textCellsRemaining"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp" />
+
+            <ImageView
+                android:id="@+id/imageClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_below="@id/textCellsRemaining"
+                android:background="@drawable/clock"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/namePlayer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageClock"
+                android:layout_marginStart="15dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numDiskP1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/numberSeconds"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/namePlayer1"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/nameCpu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namePlayer1"
+                android:layout_marginStart="15dp"
+                android:text="@string/cpu_name"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numDiskC1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/numDiskP1"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/nameCpu1"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+
+            <GridView
+                android:id="@+id/reversiTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:verticalSpacing="10dp"
+                android:gravity="center"
+                android:stretchMode="columnWidth"
+                android:layout_marginEnd="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

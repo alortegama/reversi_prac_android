@@ -1,11 +1,20 @@
 package com.udl.viladegut.ortega.reversi;
 
+import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
+import android.graphics.Point;
+import android.view.Display;
+import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+
+import com.udl.viladegut.ortega.reversi.Logica.Board;
+import com.udl.viladegut.ortega.reversi.Logica.Game;
+import com.udl.viladegut.ortega.reversi.Logica.Player;
+import com.udl.viladegut.ortega.reversi.Logica.Position;
 
 public class ButtonAdapter extends BaseAdapter {
     private Context mContext;
@@ -13,6 +22,8 @@ public class ButtonAdapter extends BaseAdapter {
     private Game game;
     private Player player;
     Button button;
+    private int width;
+    private int height;
 
     private OnItemActionClickListener listener;
 
@@ -22,10 +33,16 @@ public class ButtonAdapter extends BaseAdapter {
         this.game = game;
         this.player = player;
         this.listener=listener;
+
+        /* Obtener tamaño de la pantalla */
+        Display display = ((Activity) context).getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        width = size.x;
+        height = size.y;
     }
 
     public int getCount() {
-        Log.d("Size", "El tamaño del board es " + board.size());
         return board.size() * board.size();
     }
 
@@ -37,35 +54,29 @@ public class ButtonAdapter extends BaseAdapter {
         return 0;
     }
 
-    // create a new ImageView for each item referenced by the Adapter
     public View getView(int position, View convertView, ViewGroup parent) {
+        int widthImage;
+        int heightImage;
+
+        if(getRotation(mContext).equals("vertical")){ //es vertical o portrait.
+            widthImage = (width)/(board.size() + board.size()/2);
+            heightImage = (height/2) / (board.size() + board.size()/2);
+        }else{ // es horizontal o landscape.
+            widthImage = (width/2) / (board.size() + board.size()/2);
+            heightImage = (height * 80 / 100) / (board.size() + board.size()/2);
+        }
+
 
 
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
             button = new Button(mContext);
-            switch (board.size()) {
-                case 4:
-                    button.setLayoutParams(new ViewGroup.LayoutParams(70, 70));
-                    button.setPadding(5, 5, 5, 5);
-                    break;
-                case 6:
-                    button.setLayoutParams(new ViewGroup.LayoutParams(45, 45));
-                    button.setPadding(2, 2, 2, 2);
-                    break;
-                case 8:
-                    button.setLayoutParams(new ViewGroup.LayoutParams(35, 35));
-                    button.setPadding(2, 2, 2, 2);
-                    break;
-            }
-            //imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-
+            button.setLayoutParams(new ViewGroup.LayoutParams(widthImage, heightImage));
+            button.setPadding(5, 5, 5, 5);
         } else
             button = (Button) convertView;
 
         button.setId(position);
-
-        Log.d("Button created", "El boton se ha creado con el id " + button.getId());
 
         Position position1 = new Position(position / board.size(), position % board.size());
         if (board.isWhite(position1))
@@ -87,6 +98,18 @@ public class ButtonAdapter extends BaseAdapter {
         });
 
         return button;
+    }
+
+    public String getRotation(Context context){
+        final int rotation = ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getOrientation();
+        switch (rotation) {
+            case Surface.ROTATION_0:
+            case Surface.ROTATION_180:
+                return "vertical";
+            case Surface.ROTATION_90:
+            default:
+                return "horizontal";
+        }
     }
 
 }

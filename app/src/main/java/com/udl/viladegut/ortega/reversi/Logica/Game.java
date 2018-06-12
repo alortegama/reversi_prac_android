@@ -1,4 +1,4 @@
-package com.udl.viladegut.ortega.reversi;
+package com.udl.viladegut.ortega.reversi.Logica;
 
 import android.os.Parcel;
 import android.os.Parcelable;

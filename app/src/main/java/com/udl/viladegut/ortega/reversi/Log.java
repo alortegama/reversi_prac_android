@@ -6,12 +6,29 @@ import android.os.Parcelable;
 public class Log implements Parcelable{
     private String player;
     private String result;
+    private String date_time;
     private int grid;
     private int num_pieces_player;
     private int num_pieces_cpu;
     private String time_remaining;
 
     public Log(){}
+
+    public Log(String player, String result, String  date_time){
+        this.player = player;
+        this.result = result;
+        this.date_time = date_time;
+    }
+
+    public Log(String player, String result, String date_time, int grid, int num_pieces_player, int num_pieces_cpu, String time_remaining){
+        this.player = player;
+        this.result = result;
+        this.date_time = date_time;
+        this.grid = grid;
+        this.num_pieces_player = num_pieces_player;
+        this.num_pieces_cpu = num_pieces_cpu;
+        this.time_remaining = time_remaining;
+    }
 
     public String getTime_remaining() {
         return time_remaining;
@@ -24,10 +41,10 @@ public class Log implements Parcelable{
     protected Log(Parcel in) {
         player = in.readString();
         result = in.readString();
+        date_time = in.readString();
         grid = in.readInt();
         num_pieces_player = in.readInt();
         num_pieces_cpu = in.readInt();
-
         time_remaining = in.readString();
     }
 
@@ -75,6 +92,14 @@ public class Log implements Parcelable{
         this.num_pieces_player = num_pieces_player;
     }
 
+    public String getDate_time() {
+        return date_time;
+    }
+
+    public void setDate_time(String date_time) {
+        this.date_time = date_time;
+    }
+
     public int getNum_pieces_cpu() {
         return num_pieces_cpu;
     }
@@ -93,6 +118,7 @@ public class Log implements Parcelable{
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(player);
         dest.writeString(result);
+        dest.writeString(date_time);
         dest.writeInt(grid);
         dest.writeInt(num_pieces_player);
         dest.writeInt(num_pieces_cpu);

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".Fragments.QueryFrag">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleCheckQuery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/checkItems"
+            android:textColor="@android:color/black"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/titleCheckQuery">
+
+            <ListView
+                android:id="@+id/listViewQuery"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/buttonGoBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/colorbutton"
+                    android:drawableStart="@drawable/back1"
+                    android:text="@string/goBack"
+                    android:textSize="30sp"
+                    android:drawablePadding="10dp"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/buttonDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/colorbutton"
+                    android:drawableStart="@drawable/waste1"
+                    android:text="@string/deleteItems"
+                    android:textSize="30sp"
+                    android:drawablePadding="10dp"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@id/buttonGoBack"
+                    android:layout_marginStart="30dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
